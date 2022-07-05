@@ -18,8 +18,7 @@ class CreatePicturesTable extends Migration
             $table->integer('gallery_id');
             $table->string('name');
             $table->string('thumbnail');
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->default('0000-00-00 00:00:00');
+            $table->timestamps();
         });
     }
 

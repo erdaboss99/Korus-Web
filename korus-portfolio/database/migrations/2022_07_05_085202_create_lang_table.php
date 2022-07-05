@@ -17,6 +17,7 @@ class CreateLangTable extends Migration
             $table->integer('id', true);
             $table->string('code', 10)->unique('code');
             $table->string('name');
+            $table->timestamps();
         });
     }
 

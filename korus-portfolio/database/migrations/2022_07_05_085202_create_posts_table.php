@@ -15,8 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->integer('id', true);
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->default('0000-00-00 00:00:00');
+            $table->timestamps();
         });
     }
 

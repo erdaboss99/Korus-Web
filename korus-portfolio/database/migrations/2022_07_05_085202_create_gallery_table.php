@@ -16,8 +16,7 @@ class CreateGalleryTable extends Migration
         Schema::create('gallery', function (Blueprint $table) {
             $table->integer('id', true);
             $table->string('name');
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->default('0000-00-00 00:00:00');
+            $table->timestamps();
         });
     }
 

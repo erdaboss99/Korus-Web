@@ -20,6 +20,7 @@ class CreatePostContentsTable extends Migration
             $table->string('title');
             $table->text('read_more');
             $table->text('content');
+            $table->timestamps();
         });
     }
 
