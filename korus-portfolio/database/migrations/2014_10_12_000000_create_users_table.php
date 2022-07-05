@@ -14,8 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->id();
             $table->string('user', 50);
+            $table->tinyInteger('is_admin')->default(0);
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

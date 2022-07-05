@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOldmembersTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateOldmembersTable extends Migration
      */
     public function up()
     {
-        Schema::create('oldmembers', function (Blueprint $table) {
-            $table->integer('id', true);
-            $table->string('source');
+        Schema::create('videos', function (Blueprint $table) {
+            $table->id();
+            $table->integer('gallery_id');
             $table->string('name');
+            $table->string('source');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateOldmembersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('oldmembers');
+        Schema::dropIfExists('videos');
     }
-}
+};
