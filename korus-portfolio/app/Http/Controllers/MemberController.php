@@ -9,12 +9,13 @@ class MemberController extends Controller
 {
     public function index()
     {
-        $members = Member::all();
-        return view('member.index', compact('members'));
+        $current_members = Member::all()->where('is_old', 0);
+        $old_members = Member::all()->where('is_old', 1);
+        return view('member.index', compact('current_members', 'old_members'));
     }
 
     public function show(Member $member)
     {
-        return view('members.show', compact('member'));
+        return view('member.show', compact('member'));
     }
 }
