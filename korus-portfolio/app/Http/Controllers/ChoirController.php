@@ -11,6 +11,6 @@ class ChoirController extends Controller
     {
         $current_members = Member::all()->where('is_old', 0);
         $old_members = Member::all()->where('is_old', 1);
-        return view('pages/choir', compact('current_members', 'old_members'));
+        return view('pages/aboutus', compact('current_members', 'old_members'));
     }
 }
