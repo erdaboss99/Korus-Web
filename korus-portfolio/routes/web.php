@@ -22,9 +22,7 @@ Route::get('/korus', function () {
     return view('pages/choir');
 });
 
-Route::get('/rolunk', function () {
-    return view('pages/aboutus');
-});
+Route::get('/korus', [ChoirController::class, 'index']);
 
 Route::get('/kapcsolat', function () {
     return view('pages/contact');
