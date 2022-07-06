@@ -161,8 +161,10 @@ h1 {
     width:960px;
 }
 </style>
+
 <div class="d-flex justify-content-center">
     <div class="content">
+		<img src="{{URL::asset('/images/banners/banner.png')}}" alt="banner" width="100%">
 <div class="akt_oldal">
 	<div class="szoveg_kep_bj">
 			Az Egri Érseki Fiúkórus 2011 óta színesíti Eger és környéke zenei életét, ünnepeit, rendezvényeit. Galériánkban betekintést nyerhetnek mindennapjainkba, valamint az elmúlt évek legfontosabb eseményeibe. Koncertnaptárunkban tájékozódhatnak a közelgő eseményekről, koncertekről, fesztiválokról.
@@ -252,7 +254,9 @@ Kívánom, hogy amikor énekeltek, mindig éljétek át ezt a csodát!
     @endif
 
 	<div class="logonk">
-		<h1>{!!trans('pages.rolunk_cim4')!!}</h1>
+		<h1>{{trans('pages.rolunk_cim4')}}</h1>
+		{{--<p>{{trans('pages.paragraph6')}} {{link_to('images/assets/logo_terrakotta.png',trans('pages.logonk_png'))}} {{link_to('images/assets/logo_terrakotta.png',trans('pages.logonk_pdf'))}}</p>--}}
+		<a href="rolunk/downloadpng">Letöltés</a>
 	</div>
 
 	<div class="tamogatok">

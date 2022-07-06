@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Member;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Response;
 
 class ChoirController extends Controller
 {
