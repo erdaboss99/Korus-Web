@@ -19,6 +19,9 @@
         .nav-link{
         color: white;
         }
+        .nav-link:link, .nav-link:visited {
+        color: white;
+        }
         .nav-link:hover{
         color: #4e1d03;
         }
@@ -33,6 +36,11 @@
             font-size: 18px; color: white;
             background-color:#c64c09;
         }
+        .content{
+        width: 70%;
+        height: 100%;
+        align-self: center;
+    }
     </style>
 
     <title>Document</title>
@@ -45,14 +53,14 @@
           <div class="col p-3">
             <div style="height: 90px" class="container-fluid d-flex justify-content-center">
                 <div style="width: 144px; margin: 0">
-                    <a href="{{url('/')}}"><img src="{{URL::asset('/images/assets/logo_terra.png')}}" alt="profile Pic" height="100"></a>
+                    <a href="{{url('/')}}"><img src="{{URL::asset('/images/assets/logo_terra.png')}}" alt="logo" height="100"></a>
                 </div>
             </div>
           </div>
         </div>
       </div>
 
-    <nav class="navbar navbar-expand-sm col">
+    <nav class="navbar navbar-expand-sm col" style="padding: 10px">
         
 
         <div class="container-fluid d-flex justify-content-center">
@@ -79,9 +87,9 @@
       </nav>
 
     </div>
-    <main class="py-4">
-    @yield('content')
-    </main>
+    <div class="content container-fluid d-flex justify-content-center">
+      @yield('content')
+    </div>
     
     @include('pages.footer')
 </body>

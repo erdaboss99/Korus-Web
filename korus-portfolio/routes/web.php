@@ -21,3 +21,7 @@ Route::resource('member', \App\Http\Controllers\MemberController::class);
 Route::get('/korus', function () {
     return view('pages/choir');
 });
+
+Route::get('/rolunk', function () {
+    return view('pages/aboutus');
+});
