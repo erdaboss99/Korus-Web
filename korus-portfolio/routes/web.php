@@ -25,3 +25,7 @@ Route::get('/korus', function () {
 Route::get('/rolunk', function () {
     return view('pages/aboutus');
 });
+
+Route::get('/kapcsolat', function () {
+    return view('pages/contact');
+});

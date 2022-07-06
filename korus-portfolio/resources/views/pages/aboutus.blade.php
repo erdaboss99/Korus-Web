@@ -96,7 +96,8 @@ h1 {
     padding-left: 5px;
 }
 </style>
-
+<div class="d-flex justify-content-center">
+    <div class="content">
 <div class="akt_oldal">
 	<div class="szoveg_kep_bj">
 			Az Egri Érseki Fiúkórus 2011 óta színesíti Eger és környéke zenei életét, ünnepeit, rendezvényeit. Galériánkban betekintést nyerhetnek mindennapjainkba, valamint az elmúlt évek legfontosabb eseményeibe. Koncertnaptárunkban tájékozódhatnak a közelgő eseményekről, koncertekről, fesztiválokról.
@@ -208,5 +209,6 @@ Kívánom, hogy amikor énekeltek, mindig éljétek át ezt a csodát!
 		</a>
 	</div>
 </div>
-
+	</div>
+</div>
 @endsection

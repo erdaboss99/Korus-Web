@@ -87,7 +87,7 @@
       </nav>
 
     </div>
-    <div class="content container-fluid d-flex justify-content-center">
+    <div class="">
       @yield('content')
     </div>
     

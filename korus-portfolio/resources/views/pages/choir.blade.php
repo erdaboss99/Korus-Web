@@ -39,7 +39,7 @@ h1 {
 <div class="d-flex justify-content-center">
     <div class="content">
 
-        {{--A bannert változtathatóvá kell tenni!--}}
+        {{--A bannert változtathatóvá kell tenni! A contact-ban van kommentelve a régi kódja--}}
         <img src="{{URL::asset('/images/banners/banner.png')}}" alt="banner" width="100%">
 
         <div class="akt_oldal">
