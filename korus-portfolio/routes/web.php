@@ -18,6 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/korus', function () {
-    return view('pages/choir');
-});
+Route::get('/korus', [ChoirController::class, 'index']);

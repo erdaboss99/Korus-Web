@@ -95,6 +95,71 @@ h1 {
 .logonk a{
     padding-left: 5px;
 }
+
+.korustag_elso{
+    float:left;
+    width:140px;
+    margin-top:20px;
+    height:202px;
+}
+
+.korustag{
+    padding-left:20px;
+    float:left;
+    width:140px;
+    margin-top:20px;
+    height:202px;
+}
+
+.korustag_kep{
+    width: 140px;
+    height: 140px;
+}
+
+.korustag_kep img {
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    -webkit-border-radius: 70px;
+    -moz-border-radius: 70px;
+    float:left;
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    filter: gray;
+    -webkit-transition: all .6s ease;
+}
+
+.korustag_kep img:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    filter: none;
+}
+
+.korustagok {
+    margin:40px;
+    float:left;
+    width:960px;
+}
+
+.korustag_neve {
+    text-align:center;
+}
+
+.korustag_neve h2 {
+    margin-top:10px;
+    margin-bottom:0px;
+    padding:0;
+    font-size:16px;
+    font-weight: 400;
+    color:#c74c09;
+    text-transform: uppercase;
+}
+
+.korustagok {
+    margin-top:40px;
+    float:left;
+    width:960px;
+}
 </style>
 
 <div class="akt_oldal">
@@ -155,11 +220,11 @@ Kívánom, hogy amikor énekeltek, mindig éljétek át ezt a csodát!
 	</div>
 	<div class="korustagok">
 		<h1>{!!trans('pages.rolunk_cim2')!!}</h1>
-		@if(isset($members))
-		@foreach($members as $pic)
+		@if(isset($current_members))
+		@foreach($current_members as $pic)
 		<div class="korustag">
 			<div class="korustag_kep">
-				{{HTML::image('uploadfolder/members/'.$pic->source, '', array('alt' => $pic->name))}}
+                    <img src="{{url('/uploadfolder/members/'.$pic->source)}}">
 			</div>
 			<div class="korustag_neve">
 				<h2>{{$pic->name}}</h2>
@@ -168,14 +233,14 @@ Kívánom, hogy amikor énekeltek, mindig éljétek át ezt a csodát!
 		@endforeach
 		@endif
 	</div>
-    @if(isset($oldmembers)&&count($oldmembers)>0)
+    @if(isset($old_members)&&count($old_members)>0)
     <div class="korustagok">
         <h1>{!!trans('pages.rolunk_cim5')!!}</h1>
 
-            @foreach($oldmembers as $pic)
+            @foreach($old_members as $pic)
                 <div class="korustag">
                     <div class="korustag_kep">
-                        {{HTML::image('uploadfolder/oldmembers/'.$pic->source, '', array('alt' => $pic->name))}}
+                        <img src="{{url('/uploadfolder/members/'.$pic->source)}}">
                     </div>
                     <div class="korustag_neve">
                         <h2>{{$pic->name}}</h2>
