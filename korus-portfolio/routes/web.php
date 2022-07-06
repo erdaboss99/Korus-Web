@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/kapcsolat', function () {
-    return view('master');
+Route::get('/korus', function () {
+    return view('pages/choir');
 });
