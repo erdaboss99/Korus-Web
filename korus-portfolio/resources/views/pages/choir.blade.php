@@ -36,8 +36,14 @@ h1 {
 }
 </style>
 
+
 <div class="d-flex justify-content-center">
     <div class="content">
+        <div class="korustagok">
+            @foreach($current_members as $pic)
+            <div class="korustag">
+                <div class="korustag_kep">
+                    <img src="{{url('/uploadfolder/members/'.$pic->source)}}">
 
         {{--A bannert változtathatóvá kell tenni!--}}
         <img src="{{URL::asset('/images/banners/banner.png')}}" alt="banner" width="100%">
