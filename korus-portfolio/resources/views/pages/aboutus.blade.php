@@ -119,6 +119,7 @@ h1 {
 .korustag_kep img {
     width: 140px;
     height: 140px;
+    padding: 10px;
     border-radius: 70px;
     -webkit-border-radius: 70px;
     -moz-border-radius: 70px;
@@ -149,7 +150,7 @@ h1 {
     margin-top:10px;
     margin-bottom:0px;
     padding:0;
-    font-size:16px;
+    font-size:14px;
     font-weight: 400;
     color:#c74c09;
     text-transform: uppercase;
