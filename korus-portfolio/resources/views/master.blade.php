@@ -60,7 +60,7 @@
 
     </style>
 
-    <title>Document</title>
+    <title>Egri Érseki Fiúkórus</title>
 </head>
 <body>
     <div class="header">
@@ -84,7 +84,7 @@
           <!-- Links -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link menupont" href="#">A KÓRUS</a>
+              <a class="nav-link menupont" href="{{url('/rolunk')}}">A KÓRUS</a>
             </li>
             <li class="nav-item">
               <a class="nav-link menupont" href="#">HÍRFOLYAM</a>
@@ -96,7 +96,7 @@
                 <a class="nav-link menupont" href="#">ESEMÉNYNAPTÁR</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link menupont" href="#">KAPCSOLAT</a>
+                <a class="nav-link menupont" href="{{url('/kapcsolat')}}">KAPCSOLAT</a>
               </li>
           </ul>
         </div>

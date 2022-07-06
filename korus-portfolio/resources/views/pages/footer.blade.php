@@ -65,11 +65,11 @@
     <div class="row" style="width: 100%">
         <div class ="col justify-content-center">
             <ul class="nav justify-content-center" >
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-light">A kórus</a></li>
+                <li class="nav-item"><a href="{{url('/rolunk')}}" class="nav-link px-2 text-light">A kórus</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Hírfolyam</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Galéria</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Eseménynaptár</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Kapcsolat</a></li>
+                <li class="nav-item"><a href="{{url('/kapcsolat')}}" class="nav-link px-2 text-light">Kapcsolat</a></li>
               </ul>
         </div>
         <div class ="col-md-16 justify-content-center">

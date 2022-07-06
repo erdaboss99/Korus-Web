@@ -14,13 +14,25 @@ use App\Http\Controllers\ChoirController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::get('/korus', [ChoirController::class, 'index']);
+Route::get('/', [ChoirController::class, 'index']);
+Route::get('/rolunk', [ChoirController::class, 'index']);
 
 Route::get('/kapcsolat', function () {
     return view('pages/contact');
+});
+
+Route::get('/ersek', function () {
+    return view('pages/profiles/ersek');
+});
+
+Route::get('/szilvia', function () {
+    return view('pages/profiles/szilvia');
+});
+
+Route::get('/hhm', function () {
+    return view('pages/profiles/hhm');
+});
+
+Route::get('/korus', function () {
+    return view('pages/profiles/choir');
 });

@@ -174,7 +174,7 @@ h1 {
 	</div>
 	<div class="szoveg_kep_bj">
 		<div class="kor_kep">
-                        <a href="/?page=korus"><img src={{asset('images/assets/korus_oldalra.jpg')}} alt="A kórus"></a>
+                        <a href="{{url('/korus')}}"><img src={{asset('images/assets/korus_oldalra.jpg')}} alt="A kórus"></a>
 		</div>
 		<div class="szoveg_kb">
 			<h1>{!!trans('pages.rolunk_cim1')!!}</h1>
@@ -198,12 +198,12 @@ Isten minden nyelven beszél, bármelyiken meg lehet szólítani. Azt hiszem, ho
 
 		</div>
 		<div class="kor_kep">
-                        <a href="/?page=ersek"><img src={{asset('images/assets/ternyak.jpg')}} alt="Érsek Úr"></a>
+                        <a href="{{url('/ersek')}}"><img src={{asset('images/assets/ternyak.jpg')}} alt="Érsek Úr"></a>
 		</div>
 	</div>
 	<div class="szoveg_kep_bj">
 		<div class="kor_kep">
-                        <a href="/?page=szilvia"><img src={{asset('images/assets/szilvi.jpg')}} alt="Schmiedmeiszter Szilvia"></a>
+                        <a href="{{url('/szilvia')}}"><img src={{asset('images/assets/szilvi.jpg')}} alt="Schmiedmeiszter Szilvia"></a>
 		</div>
 		<div class="szoveg_kb">
 			<h1>{!!trans('pages.rolunk_nev2')!!}</h1>
@@ -220,7 +220,7 @@ született harmónia. A megszületés pillanatában a dal túllép a szavakon.
 Kívánom, hogy amikor énekeltek, mindig éljétek át ezt a csodát!
 		</div>
 		<div class="kor_kep">
-                        <a href="/?page=hhm"><img src={{asset('images/assets/margit.jpg')}} alt="Hegyesi Hudik Margó"></a>
+                        <a href="{{url('/hhm')}}"><img src={{asset('images/assets/margit.jpg')}} alt="Hegyesi Hudik Margó"></a>
 		</div>
 	</div>
 	<div class="korustagok">
