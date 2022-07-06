@@ -34,6 +34,7 @@
 .szoveg_kep_bj {
     float:left;
     margin-top:50px;
+	font-size: 16px;
 
 }
 

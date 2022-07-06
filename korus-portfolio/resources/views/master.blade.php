@@ -41,6 +41,23 @@
         height: 100%;
         align-self: center;
     }
+    .menupont {
+    position: relative;
+    background-color: #c64c09;
+}
+
+.menupont:hover:after{
+    border-left: 10px solid transparent;
+    border-right: 11px solid transparent; content:"";
+    border-top: 13px solid #c64c09;
+    position: absolute;
+    bottom: -23px;
+    width: 0px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+
     </style>
 
     <title>Document</title>
@@ -67,19 +84,19 @@
           <!-- Links -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">A KÓRUS</a>
+              <a class="nav-link menupont" href="#">A KÓRUS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">HÍRFOLYAM</a>
+              <a class="nav-link menupont" href="#">HÍRFOLYAM</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">GALÉRIA</a>
+              <a class="nav-link menupont" href="#">GALÉRIA</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">ESEMÉNYNAPTÁR</a>
+                <a class="nav-link menupont" href="#">ESEMÉNYNAPTÁR</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">KAPCSOLAT</a>
+                <a class="nav-link menupont" href="#">KAPCSOLAT</a>
               </li>
           </ul>
         </div>
