@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Member;
+use App\Models\Gallery;
+use App\Models\Picture;
+use App\Models\Post;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -211,10 +214,23 @@ class DatabaseSeeder extends Seeder
             'name' => 'gQbwbE_IMG_0628.JPG',
             'thumbnail' => 'th_gQbwbE_IMG_0628.JPG',
         ]);
-
-
-
-
-
+        Post::factory()->create([
+            'lang_id' => 1,
+            'title' => 'Adventi koncert',
+            'read_more' => '<p><img alt=\"Adventi koncert\" src=\"http://egerfiukorus.hu/uploadfolder/images/Karacsonyi_2014.jpg\" style=\"height:563px; width:400px\" /></p>\r\n',
+            'content' => '<p><img alt=\"Adventi koncert\" src=\"http://egerfiukorus.hu/uploadfolder/images/Karacsonyi_2014.jpg\" style=\"height:1206px; line-height:20.7999992370605px; width:800px\" /></p>\r\n',
+        ]);
+        Post::factory()->create([
+            'lang_id' => 1,
+            'title' => 'Videntes Stellam Kórus Hangverseny',
+            'read_more' => '<p><img alt=\"Videntes stellam\" src=\"http://egerfiukorus.hu/uploadfolder/images/Videntes_Stellam_2014.jpg\" style=\"height:572px; line-height:20.7999992370605px; width:400px\" /></p>\r\n',
+            'content' => '<p><img alt=\"Videntes stellam\" src=\"http://egerfiukorus.hu/uploadfolder/images/Videntes_Stellam_2014.jpg\" style=\"height:1144px; line-height:20.7999992370605px; width:800px\" /></p>\r\n',
+        ]);
+        Post::factory()->create([
+            'lang_id' => 1,
+            'title' => 'Karácsonyi Koncert',
+            'read_more' => '<p>Nagy &ouml;r&ouml;mnap a mai, hiszen k&oacute;rusunk &ouml;n&aacute;ll&oacute; Kar&aacute;csonyi Koncertj&eacute;vel kedvesked&uuml;nk zeneszerető k&ouml;z&ouml;ns&eacute;g&uuml;nknek. De ezen a sz&eacute;p esem&eacute;nyen k&iacute;v&uuml;l m&eacute;g egy nagy &ouml;r&ouml;m &eacute;rt ma benn&uuml;nket...</p>\r\n',
+            'content' => '<p>Nagy &ouml;r&ouml;mnap a mai, hiszen k&oacute;rusunk &ouml;n&aacute;ll&oacute; Kar&aacute;csonyi Koncertj&eacute;vel kedvesked&uuml;nk zeneszerető k&ouml;z&ouml;ns&eacute;g&uuml;nknek. De ezen a sz&eacute;p esem&eacute;nyen k&iacute;v&uuml;l m&eacute;g egy nagy &ouml;r&ouml;m &eacute;rt ma benn&uuml;nket. Elindult az Egri &Eacute;rseki Fi&uacute;k&oacute;rus honlapja. H&aacute;l&aacute;s sz&iacute;vvel k&ouml;sz&ouml;nj&uuml;k a honlap elk&eacute;sz&iacute;t&eacute;s&eacute;t Tajti Tibornak (egyik k&oacute;rustagunk apuk&aacute;ja) &eacute;s csapat&aacute;nak.</p>\r\n\r\n<p>Szeretettel k&ouml;sz&ouml;nt&uuml;nk Mindenkit honlapunkon!</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Boldog Kar&aacute;csonyt!</p>\r\n',
+        ]);
     }
 }
