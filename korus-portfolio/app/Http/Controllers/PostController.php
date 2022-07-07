@@ -19,7 +19,7 @@ class PostController extends Controller
 
         $new = Post::find($id);
 
-        return view('pages/news');
+        return view('pages/onenew', ['data' => $new]);
     }
 
     public static function create(Request $request){

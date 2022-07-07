@@ -877,3 +877,12 @@ footer{
         font-size: 18px; color: white;
         background-color:#c64c09;
     }
+    .read_more{
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        height: 30px;
+    }
+    .ck-editor__editable {
+        min-height: 250px;
+    }

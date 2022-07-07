@@ -1,7 +1,9 @@
 @extends('master')
 @section('content')
 
-
+<div class="d-flex justify-content-center">
+    <div class="content">
+        <img src="{{URL::asset('/images/banners/banner.png')}}" alt="banner" width="100%">
 
 
 <div class="d-flex justify-content-center">
@@ -35,7 +37,50 @@
                         </div>
                         <div class="col-8">
                             <label for="description">Szöveg</label>
-                            <textarea name="text" rows="4" cols="50" class="form-control mb-4"></textarea>
+                            <div class = "ck_editor">
+
+    <textarea name="content" id="editor"></textarea>
+
+    <script>
+        var element = document.getElementById('editor');
+
+        ClassicEditor
+            .create(element)
+            .catch(error => {
+                console.error(error);
+            })
+            .then(editor => {
+                // When the field is instantiated it notified the UI that it has been loaded.
+                var field = new SquidexFormField();
+
+                // Handle the value change event and set the text to the editor.
+                field.onValueChanged(function (value) {
+                    if (value) {
+                        editor.setData(value);
+                    }
+                });
+
+                // Disable the editor when it should be disabled.
+                field.onDisabled(function (disabled) {
+                    editor.set('isReadOnly', disabled);
+                });
+
+                editor.model.document.on('change', function () {
+                    var data = editor.getData();
+
+                    // Notify the UI that the value has been changed. Will be used to trigger validation.
+                    field.valueChanged(data);
+                });
+
+                editor.ui.focusTracker.on('change:isFocused', function (event, name, isFocused) {
+                    if (!isFocused) {
+                        // Notify the UI that the value has been touched.
+                        field.touched();
+                    }
+                });
+            });
+    </script>
+                            </div>
                         </div>
                         <div class="col-8">
                             <label for="date">Kép</label>
@@ -56,7 +101,7 @@
 <div class="d-flex flex-column">
     <div class="d-flex flex-column mx-2">
         <div class="d-flex justify-content-center">
-            <div class="d-flex mb-3 col-sm-10 col-lg-5 align-self-left">
+            <div class="d-flex mb-3 col-sm-10 col-lg-7 align-self-left">
                 <h1>Hírek</h1>
             </div>
         </div>
@@ -70,11 +115,14 @@
 <div class="d-flex flex-column">
     <div class="d-flex flex-column mx-2">
         <div class="d-flex justify-content-center">
-            <div class="card d-flex mb-3 col-sm-10 col-lg-5 align-self-center">
-                <img src="{{ asset('img/news_img/'.$item->header_img) }}" class="card-img-top" alt="...">
+            <div class="card d-flex mb-3 col-sm-10 col-lg-7 align-self-center">
+                <img src="{{ asset('uploadfolder/images/'.$item->header_img) }}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{$item->title}}</h5>
-                    <a href="{{'/news/'.$item->id}}" class="stretched-link"></a>
+                    <div class="read_more">
+                        {!!$item->content!!}
+                    </div>
+                    <a href="{{'/hirfolyam/'.$item->id}}" class="stretched-link"></a>
 
 
                     
@@ -85,7 +133,7 @@
 </div>
 
 <div class="d-flex justify-content-center" style="margin-bottom: 20px;">
-    <form action="{{url('/news/'.$item->id.'/delete/')}}" method="POST">
+    <form action="{{url('/hirfolyam/'.$item->id.'/delete/')}}" method="POST">
         @csrf
         <div class="d-flex">
             <div class="d-flex mx-2">
@@ -98,4 +146,6 @@
 
 @endforeach
 
+    </div>
+</div>
 @endsection

@@ -23,6 +23,7 @@ Route::get('/galeria/{id}', [GalleryController::class, 'showGallery']);
 
 Route::get('/hirfolyam', [PostController::class, 'show']);
 Route::get('/hirfolyam/letrehoz', [PostController::class, 'create'])->name('createPost');
+Route::get('/hirfolyam/{id}', [PostController::class, 'showOnePost']);
 
 
 Route::get('/kapcsolat', function () {
@@ -43,4 +44,8 @@ Route::get('/hhm', function () {
 
 Route::get('/korus', function () {
     return view('pages/profiles/choir');
+});
+
+Route::get('/cke', function () {
+    return view('cke_editor');
 });
