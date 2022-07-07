@@ -1,7 +1,7 @@
 
 
 <div class="sziluett" style="text-align: end">
-    <img src="{{URL::asset('/images/assets/sziluett_eger.png')}}" width="30%" style="margin-right: 20%">
+    <img src="{{URL::asset('/images/assets/sziluett_eger.png')}}" width="40%" style="margin-right: 10%">
   </div>
 
 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">

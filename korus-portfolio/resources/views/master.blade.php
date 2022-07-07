@@ -54,6 +54,9 @@
             <li class="nav-item">
                 <a class="nav-link menupont" href="{{url('/kapcsolat')}}">KAPCSOLAT</a>
               </li>
+            <li class="nav-item">
+                <a class="nav-link menupont" href="{{url('/kapcsolat')}}">BEJELENTKEZÉS</a>
+              </li>
           </ul>
         </div>
 
