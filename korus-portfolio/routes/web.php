@@ -21,8 +21,10 @@ Route::get('/rolunk', [ChoirController::class, 'index']);
 Route::get('/galeria', [GalleryController::class, 'listGallery']);
 Route::get('/galeria/{id}', [GalleryController::class, 'showGallery']);
 
-Route::get('/hirfolyam', [PostController::class, 'show']);
-Route::get('/hirfolyam/letrehoz', [PostController::class, 'create'])->name('createPost');
+Route::get('/hirfolyam', [PostController::class, 'show'])->name('hirfolyam');
+Route::post('/hirfolyam/letrehoz', [PostController::class, 'create'])->name('createPost');
+Route::post('/hirfolyam/{id}/delete', [PostController::class, 'destroy'])->name('deletePost');
+Route::post('/hirfolyam/{id}/update', [PostController::class, 'update'])->name('updatePost');
 Route::get('/hirfolyam/{id}', [PostController::class, 'showOnePost']);
 
 
