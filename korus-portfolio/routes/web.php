@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChoirController;
+use App\Http\Controllers\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,9 @@ use App\Http\Controllers\ChoirController;
 
 Route::get('/', [ChoirController::class, 'index']);
 Route::get('/rolunk', [ChoirController::class, 'index']);
+Route::get('/galeria', [GalleryController::class, 'listGallery']);
+Route::get('/galeria/{id}', [GalleryController::class, 'showGallery']);
+
 
 Route::get('/kapcsolat', function () {
     return view('pages/contact');

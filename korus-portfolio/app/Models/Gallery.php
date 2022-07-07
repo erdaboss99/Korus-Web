@@ -13,11 +13,6 @@ class Gallery extends Model
         'name'
     ];
 
-    public function pictures()
-    {
-        return $this->hasMany('Picture');
-    }
-
     public function videos()
     {
         return $this->hasMany('Video');

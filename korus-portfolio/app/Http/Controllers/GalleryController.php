@@ -3,28 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Gallery;
+use App\Models\Picture;
 
 class GalleryController extends Controller
 {
     public function listGallery()
     {
-        $galleries = Gallery::orderBy('id','desc')->paginate(50);
+        if(Gallery::all()->count() > 0) {
+            $galleries = Gallery::all();
+            foreach($galleries as $g){
+                $g->count = Picture::where('gallery_id', $g->id)->count();
+                $g->lead = Picture::where('gallery_id', $g->id)->first()->thumbnail;
 
-        $galleries = Gallery::orderBy('id','desc')->paginate(50);
-        for($i=0;$i<sizeof($galleries);$i++){
-            $p_count = DB::table('pictures')
-                    ->select('gallery_id')
-                    ->where('gallery_id','=',$galleries[$i]['attributes']['id'])
-                    ->count();
-            $p_lead = DB::table('pictures')
-                    ->select('thumbnail')
-                    ->where('gallery_id','=',$galleries[$i]['attributes']['id'])
-                    ->first();
-            $copy = $galleries[$i]['attributes'];
-            $copy['p_count'] = $p_count;
-            $copy['p_lead'] = $p_lead;
-            $galleries[$i]['attributes'] = $copy;
+            }
+            return view('pages/gallery/galeria', compact('galleries'));
         }
-        $this->layout->main = View::make('home')->nest('content','galeria',compact('galleries'));
+        else {
+            $notFound = true;
+            return view('pages/gallery/galeria', compact('notFound'));
+        }
     }
 }
