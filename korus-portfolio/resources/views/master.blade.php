@@ -54,7 +54,7 @@
       </nav>
 
     </div>
-    <div class="">
+    <div class="tartalom">
       @yield('content')
     </div>
 
