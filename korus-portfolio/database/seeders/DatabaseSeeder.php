@@ -244,8 +244,8 @@ class DatabaseSeeder extends Seeder
         ]);
         Video::factory()->create([
             'gallery_id' => 4,
-            'source' => 'https://www.youtube.com/watch?v=Fx_iib68Du8',
-            'name' => 'videó 1',
+            'source' => 'Fx_iib68Du8',
+            'name' => 'Adventi Kórushangverseny 2015',
         ]);
 
     }
