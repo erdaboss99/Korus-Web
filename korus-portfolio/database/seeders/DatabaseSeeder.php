@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Member;
+use App\Models\Gallery;
+use App\Models\Picture;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -211,10 +213,5 @@ class DatabaseSeeder extends Seeder
             'name' => 'gQbwbE_IMG_0628.JPG',
             'thumbnail' => 'th_gQbwbE_IMG_0628.JPG',
         ]);
-
-
-
-
-
     }
 }
