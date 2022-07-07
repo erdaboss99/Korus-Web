@@ -1,58 +1,6 @@
 @extends("master")
 @section('content')
 
-<style>
-
-.content{
-        width: 70%;
-        height: 100%;
-        align-self: center;
-    }
-h1 {
-    margin-top:20px;
-    font-size:16px;
-    font-weight: 400;
-    color:#c74c09;
-    text-transform: uppercase;
-}
-.kapcsolat_oszlop{
-    width: 390px;
-    padding: 0px;
-    margin: 0px;
-    margin-bottom: 25px;
-}
-
-.kapcsolat_div{
-    width: 180px;
-    float: left;
-    padding: 0px;
-    margin: 0px;
-    margin-top: 35px;
-    margin-bottom: 25px;
-}
-
-.kapcsolat_bal_aldiv{
-    width: 180px;
-    margin-bottom: 15px;
-    font-size:15px;
-    text-align: right;
-    font-weight: 400;
-    color:#c74c09;
-    text-transform: uppercase;
-    float: left;
-}
-
-.kapcsolat_jobb_aldiv{
-    width: 345px;
-    margin-left: 50px;
-    margin-bottom: 15px;
-    font-size:15px;
-    text-align: left;
-    font-weight: 400;
-    float: left;
-}
-    </style>
-
 <div class="d-flex justify-content-center">
     <div class="content">
 
