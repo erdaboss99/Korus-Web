@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChoirController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,10 @@ use App\Http\Controllers\ChoirController;
 
 Route::get('/', [ChoirController::class, 'index']);
 Route::get('/rolunk', [ChoirController::class, 'index']);
+
+Route::get('/hirfolyam', [PostController::class, 'show']);
+Route::get('/hirfolyam/letrehoz', [PostController::class, 'create'])->name('createPost');
+
 
 Route::get('/kapcsolat', function () {
     return view('pages/contact');
