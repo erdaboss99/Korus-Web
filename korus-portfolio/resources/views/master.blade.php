@@ -37,7 +37,7 @@
               <a class="nav-link menupont" href="{{url('/rolunk')}}">A KÓRUS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link menupont" href="#">HÍRFOLYAM</a>
+              <a class="nav-link menupont" href="{{url('/hirfolyam')}}">HÍRFOLYAM</a>
             </li>
             <li class="nav-item">
               <a class="nav-link menupont" href="#">GALÉRIA</a>
