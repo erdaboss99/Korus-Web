@@ -157,6 +157,64 @@ class DatabaseSeeder extends Seeder
             'source' => 'W5tZ93_k880ao_ix8h2y_gyori kende.jpg',
             'is_old' => 1
         ]);
+        Gallery::factory()->create([
+            'name' => 'Noszvaj (2012)'
+        ]);
+        Gallery::factory()->create([
+            'name' => 'Nyári tábor (2012)'
+        ]);
+        Gallery::factory()->create([
+            'name' => 'Őszi tábor (2012)'
+        ]);
+        Picture::factory()->create([
+            'gallery_id' => 1,
+            'name' => 'FvHItd_DSCF1742.JPG',
+            'thumbnail' => 'th_FvHItd_DSCF1742.JPG',
+        ]);
+        Picture::factory()->create([
+            'gallery_id' => 1,
+            'name' => 'FduJ11_DSCF1745.JPG',
+            'thumbnail' => 'th_FduJ11_DSCF1745.JPG',
+        ]);
+        Picture::factory()->create([
+            'gallery_id' => 1,
+            'name' => 'hq4CUW_DSCF1746.JPG',
+            'thumbnail' => 'th_hq4CUW_DSCF1746.JPG',
+        ]);
+        Picture::factory()->create([
+            'gallery_id' => 2,
+            'name' => 'IYmYz9__MG_9318.JPG',
+            'thumbnail' => 'th_IYmYz9__MG_9318.JPG',
+        ]);
+        Picture::factory()->create([
+            'gallery_id' => 2,
+            'name' => 'R1IvbC__MG_9320.JPG',
+            'thumbnail' => 'th_R1IvbC__MG_9320.JPG',
+        ]);
+        Picture::factory()->create([
+            'gallery_id' => 2,
+            'name' => 'TAt5u2__MG_9324.JPG',
+            'thumbnail' => 'th_TAt5u2__MG_9324.JPG',
+        ]);
+        Picture::factory()->create([
+            'gallery_id' => 3,
+            'name' => 'YWFDxq_IMG_0622.JPG',
+            'thumbnail' => 'th_YWFDxq_IMG_0622.JPG',
+        ]);
+        Picture::factory()->create([
+            'gallery_id' => 3,
+            'name' => 'QmBu3l_IMG_0623.JPG',
+            'thumbnail' => 'th_QmBu3l_IMG_0623.JPG',
+        ]);
+        Picture::factory()->create([
+            'gallery_id' => 3,
+            'name' => 'gQbwbE_IMG_0628.JPG',
+            'thumbnail' => 'th_gQbwbE_IMG_0628.JPG',
+        ]);
+
+
+
+
 
     }
 }
