@@ -1,8 +1,6 @@
 @extends("master")
 @section('content')
 
-<div class="d-flex justify-content-center">
-    <div class="content">
         <img src="{{URL::asset('/images/banners/banner.png')}}" alt="banner" width="100%">
 
         <div class="akt_oldal">
@@ -16,7 +14,5 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
 @endsection

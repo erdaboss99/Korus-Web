@@ -24,31 +24,34 @@ class PostController extends Controller
 
     public static function create(Request $request){
 
+        
         $request->validate([
             'title' => 'required',
-            'text' => 'required',
-            'img' => 'required|mimes:jpg,png,jpeg|max:5048'
+            'content' => 'required',
+            'img' => 'required',
         ]);
-
         $newImgName = time().'-'.$request->title.'.'.$request->img->extension();
-
-        $request->img->move(public_path('img/news_img'), $newImgName);
-
+        $request->img->move(public_path('uploadfolder/images'), $newImgName);
+        $lang = 1;
+        if($request->lang = "en"){
+            $lang = 2;
+        }
 
         $new = Post::create([
             'title' => $request->input('title'),
-            'text' => $request->input('text'),
+            'lang_id' => $lang,
+            'content' => $request->input('content'),
             'header_img' => $newImgName
         ]);
         
-        return redirect()->route('news');
+        return redirect()->route('hirfolyam');
     }
 
     public function destroy(Request $request)
     {
         
         $new = Post::find($request->id);
-        $path = public_path('img/news_img/');
+        $path = public_path('uploadfolder/images/');
         $name = $new->header_img;
         //dd('img/news_img/'.$new->header_img);
         unlink($path. $name);
@@ -57,29 +60,28 @@ class PostController extends Controller
         
 
         
-        return redirect()->route('news');
+        return redirect()->route('hirfolyam');
     }
     public function update(Request $request, $id)
     {
         $new = Post::find($id);
         $new->title = $request->input('title');
-        $new->text = $request->input('text');
+        $new->content = $request->input('content');
         $new->header_img = $new->header_img;
 
         $request->validate([
             'title' => 'required',
-            'text' => 'required',
-            'img' => 'mimes:jpg,png,jpeg|max:5048'
+            'content' => 'required',
         ]);
         if($request->exists('img')){
             
-            $request->img->move(public_path('img/news_img'), $new->header_img);
+            $request->img->move(public_path('uploadfolder/images/'), $new->header_img);
             
         }
 
         $new->save();
 
-        return redirect()->route('news');
+        return redirect()->route('hirfolyam');
 
     }
 }

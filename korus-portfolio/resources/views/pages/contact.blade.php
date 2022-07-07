@@ -1,8 +1,6 @@
 @extends("master")
 @section('content')
 
-<div class="d-flex justify-content-center">
-    <div class="content">
 
         <img src="{{URL::asset('/images/banners/banner.png')}}" alt="banner" width="100%">
 {{--<div id="slider" class="banner nivoSlider">
@@ -78,8 +76,6 @@
         </div>
     </div>
     <div class="clear"></div>
-</div>
-    </div>
 </div>
 
 @endsection

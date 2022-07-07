@@ -1,8 +1,6 @@
 @extends("master")
 @section('content')
 
-<div class="d-flex justify-content-center">
-    <div class="content">
 		<img src="{{URL::asset('/images/banners/banner.png')}}" alt="banner" width="100%">
 <div class="akt_oldal">
 	<div class="szoveg_kep_bj">
@@ -115,8 +113,6 @@ Kívánom, hogy amikor énekeltek, mindig éljétek át ezt a csodát!
 		<a href="{{url('http://www.ld-foto.hu/')}}" target="_blank">
 			<img src="{{URL::asset('images/assets/l_david_alairas.png', '', array('alt' => 'Lingsch Dávid fotó'))}}">
 		</a>
-	</div>
-</div>
 	</div>
 </div>
 @endsection

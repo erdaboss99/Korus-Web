@@ -1,8 +1,7 @@
 @extends('master')
 @section('content')
 
-<div class="d-flex justify-content-center">
-    <div class="content">
+
         <img src="{{URL::asset('/images/banners/banner.png')}}" alt="banner" width="100%">
 
 
@@ -31,6 +30,11 @@
                     <form action="{{ route('createPost') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="container d-flex flex-column justify-content-center align-items-center">
+                        <div class="col-8">
+                            <label for="name">A szöveg nyelve:</label><br>
+                            <input type="radio" name="lang" id="hu" checked> Magyar<br>
+                            <input type="radio" name="lang" id="en"> Angol<br>
+                        </div>
                         <div class="col-8">
                             <label for="name">Cím</label>
                             <input type="text" name="title" id="title" class="form-control mb-4">
@@ -146,6 +150,5 @@
 
 @endforeach
 
-    </div>
-</div>
+
 @endsection
