@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChoirController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PostController;
 
 /*
@@ -17,6 +18,8 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', [ChoirController::class, 'index']);
 Route::get('/rolunk', [ChoirController::class, 'index']);
+Route::get('/galeria', [GalleryController::class, 'listGallery']);
+Route::get('/galeria/{id}', [GalleryController::class, 'showGallery']);
 
 Route::get('/hirfolyam', [PostController::class, 'show']);
 Route::get('/hirfolyam/letrehoz', [PostController::class, 'create'])->name('createPost');
