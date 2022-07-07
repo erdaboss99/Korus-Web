@@ -155,6 +155,7 @@ table, tr, th, td {
 .szoveg_kep_bj {
     float:left;
     margin-top:50px;
+    display: flex;
 
 }
 
@@ -176,7 +177,7 @@ table, tr, th, td {
 .logonk{
     float:left;
     margin-top:40px;
-    width:100%;    
+    width:100%;
 }
 
 .logonk a{
@@ -578,7 +579,7 @@ footer{
 
 #post_admin_row{
     float: left;
-    width: 100%;  
+    width: 100%;
     margin-bottom: 10px;
 }
 
@@ -699,9 +700,9 @@ footer{
     color: #c64c09;
 }
 
-.login_forms input, 
-#tag_newpass_form input, 
-.newgallery_block input, 
+.login_forms input,
+#tag_newpass_form input,
+.newgallery_block input,
 #editgallery_upper input,
 #editbanner_upper input,
 #editmember_upper input{
@@ -714,16 +715,16 @@ footer{
     padding: 0px 10px;
 }
 
-.login_forms input[type="password"], 
+.login_forms input[type="password"],
 #tag_newpass_form input[type="password"],
 #editbanner_upper input[type="password"],
 #editmember_upper input[type="password"]{
     margin: 10px;
 }
 
-.login_forms input[type="submit"], 
-#tag_newpass_form input[type="submit"], 
-.newgallery_block input[type="submit"], 
+.login_forms input[type="submit"],
+#tag_newpass_form input[type="submit"],
+.newgallery_block input[type="submit"],
 #editgallery_upper input[type="submit"],
 #editbanner_upper input[type="submit"],
 #editmember_upper input[type="submit"]{
@@ -741,7 +742,7 @@ footer{
     background-position: center;
     width: 30px;
     height: 30px;
-    background-size: 100%; 
+    background-size: 100%;
     margin-left: 20px;
 }
 
@@ -879,9 +880,9 @@ footer{
         background-color:#c64c09;
     }
     .read_more{
-        white-space: nowrap; 
+        white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis; 
+        text-overflow: ellipsis;
         height: 30px;
     }
     .ck-editor__editable {
