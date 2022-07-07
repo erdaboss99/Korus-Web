@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="header">
-    
+
     <div class="container-fluid">
         <div class="row">
           <div class="col p-3">
@@ -28,7 +28,7 @@
       </div>
 
     <nav class="navbar navbar-expand-sm col" style="padding: 10px">
-        
+
 
         <div class="container-fluid d-flex justify-content-center">
           <!-- Links -->
@@ -40,7 +40,7 @@
               <a class="nav-link menupont" href="{{url('/hirfolyam')}}">HÍRFOLYAM</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link menupont" href="#">GALÉRIA</a>
+              <a class="nav-link menupont" href="{{url('/galeria')}}">GALÉRIA</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link menupont" href="#">ESEMÉNYNAPTÁR</a>
@@ -50,14 +50,14 @@
               </li>
           </ul>
         </div>
-      
+
       </nav>
 
     </div>
     <div class="">
       @yield('content')
     </div>
-    
+
     @include('pages.footer')
 </body>
 </html>

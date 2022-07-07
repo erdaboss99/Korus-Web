@@ -6,6 +6,8 @@ use App\Models\Member;
 use App\Models\Gallery;
 use App\Models\Picture;
 use App\Models\Post;
+use App\Models\Video;
+
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -169,6 +171,9 @@ class DatabaseSeeder extends Seeder
         Gallery::factory()->create([
             'name' => 'Őszi tábor (2012)'
         ]);
+        Gallery::factory()->create([
+            'name' => 'Videntes Stellam 2015 video'
+        ]);
         Picture::factory()->create([
             'gallery_id' => 1,
             'name' => 'FvHItd_DSCF1742.JPG',
@@ -214,6 +219,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'gQbwbE_IMG_0628.JPG',
             'thumbnail' => 'th_gQbwbE_IMG_0628.JPG',
         ]);
+        Picture::factory()->create([
+            'gallery_id' => 4,
+            'name' => 'y0IbRc_logo tv szt i.jpg',
+            'thumbnail' => 'th_y0IbRc_logo tv szt i.jpg',
+        ]);
         Post::factory()->create([
             'lang_id' => 1,
             'title' => 'Adventi koncert',
@@ -232,5 +242,11 @@ class DatabaseSeeder extends Seeder
             'read_more' => '<p>Nagy &ouml;r&ouml;mnap a mai, hiszen k&oacute;rusunk &ouml;n&aacute;ll&oacute; Kar&aacute;csonyi Koncertj&eacute;vel kedvesked&uuml;nk zeneszerető k&ouml;z&ouml;ns&eacute;g&uuml;nknek. De ezen a sz&eacute;p esem&eacute;nyen k&iacute;v&uuml;l m&eacute;g egy nagy &ouml;r&ouml;m &eacute;rt ma benn&uuml;nket...</p>\r\n',
             'content' => '<p>Nagy &ouml;r&ouml;mnap a mai, hiszen k&oacute;rusunk &ouml;n&aacute;ll&oacute; Kar&aacute;csonyi Koncertj&eacute;vel kedvesked&uuml;nk zeneszerető k&ouml;z&ouml;ns&eacute;g&uuml;nknek. De ezen a sz&eacute;p esem&eacute;nyen k&iacute;v&uuml;l m&eacute;g egy nagy &ouml;r&ouml;m &eacute;rt ma benn&uuml;nket. Elindult az Egri &Eacute;rseki Fi&uacute;k&oacute;rus honlapja. H&aacute;l&aacute;s sz&iacute;vvel k&ouml;sz&ouml;nj&uuml;k a honlap elk&eacute;sz&iacute;t&eacute;s&eacute;t Tajti Tibornak (egyik k&oacute;rustagunk apuk&aacute;ja) &eacute;s csapat&aacute;nak.</p>\r\n\r\n<p>Szeretettel k&ouml;sz&ouml;nt&uuml;nk Mindenkit honlapunkon!</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Boldog Kar&aacute;csonyt!</p>\r\n',
         ]);
+        Video::factory()->create([
+            'gallery_id' => 4,
+            'source' => 'https://www.youtube.com/watch?v=Fx_iib68Du8',
+            'name' => 'videó 1',
+        ]);
+
     }
 }

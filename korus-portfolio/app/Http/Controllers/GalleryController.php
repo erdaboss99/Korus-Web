@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Gallery;
 use App\Models\Picture;
+use App\Models\Video;
+
 
 class GalleryController extends Controller
 {
@@ -23,5 +25,14 @@ class GalleryController extends Controller
             $notFound = true;
             return view('pages/gallery/galeria', compact('notFound'));
         }
+    }
+
+    public function showGallery($id) {
+
+        $pictures = Picture::all()->where('gallery_id', $id);
+        $videos = Video::all()->where('gallery_id', $id);
+
+        return view('pages/gallery/show', compact('pictures', 'videos'));
+
     }
 }
