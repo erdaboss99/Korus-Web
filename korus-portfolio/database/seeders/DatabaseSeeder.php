@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Member;
 use App\Models\Gallery;
+use App\Models\Lang;
 use App\Models\Picture;
 use App\Models\Post;
 use App\Models\Video;
@@ -247,6 +248,17 @@ class DatabaseSeeder extends Seeder
             'source' => 'Fx_iib68Du8',
             'name' => 'Adventi Kórushangverseny 2015',
         ]);
+        Lang::factory()->create([
+            'code' => 'hu',
+            'name' => 'Magyar',
+        ]);
+        Lang::factory()->create([
+            'code' => 'en',
+            'name' => 'Angol',
+        ]);
+
+
+
 
     }
 }
