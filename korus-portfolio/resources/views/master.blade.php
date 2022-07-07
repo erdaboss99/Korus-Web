@@ -10,6 +10,8 @@
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/ystie.css" rel="stylesheet">
 
+    <script src="editor-sdk.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/10.0.0/classic/ckeditor.js"></script>
     <title>Egri Érseki Fiúkórus</title>
 </head>
 <body>

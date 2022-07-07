@@ -11,8 +11,8 @@ class Post extends Model
 
     protected $fillable = [
         'lang_id',
+        'header_img',
         'title',
-        'read_more',
         'content'
     ];
 }
