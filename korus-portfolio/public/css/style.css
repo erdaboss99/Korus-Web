@@ -103,6 +103,22 @@ table, tr, th, td {
     transition-duration: 0.5s;
 }
 
+.menupont {
+    position: relative;
+    background-color: #c64c09;
+}
+
+.menupont:hover:after{
+    border-left: 10px solid transparent;
+    border-right: 11px solid transparent; content:"";
+    border-top: 13px solid #c64c09;
+    position: absolute;
+    bottom: -30px;
+    width: 0px;
+    left: 50%;
+    margin-left: -10px;
+}
+
 .tartalom {
     width:65%;
     margin:0 auto;
