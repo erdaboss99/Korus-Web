@@ -96,4 +96,14 @@ class GalleryController extends Controller
         return redirect()->route('listGallery');
     }
 
+    public function storeVideos() {
+
+    }
+
+    public function deleteVideos($id) {
+        $video = Video::find($id);
+        Picture::destroy($video->id);
+        return redirect()->route('listGallery');
+    }
+
 }
