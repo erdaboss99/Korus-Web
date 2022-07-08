@@ -96,11 +96,27 @@ class GalleryController extends Controller
         return redirect()->route('listGallery');
     }
 
-    public function storeVideos() {
+    public function storeVideo(Request $request) {
 
+        $request->validate([
+            'name' => 'required',
+            'source' => 'required'
+        ]);
+
+        $src = $request->input('source');
+
+        parse_str( parse_url( $src, PHP_URL_QUERY ), $youtube_id );
+
+        Video::create([
+            'gallery_id' => $request->input('gallery_id'),
+            'name' => $request->input('name'),
+            'source' => $youtube_id['v']
+        ]);
+
+        return redirect()->route('listGallery');
     }
 
-    public function deleteVideos($id) {
+    public function deleteVideo($id) {
         $video = Video::find($id);
         Picture::destroy($video->id);
         return redirect()->route('listGallery');
