@@ -18,8 +18,12 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', [ChoirController::class, 'index']);
 Route::get('/rolunk', [ChoirController::class, 'index']);
-Route::get('/galeria', [GalleryController::class, 'listGallery']);
-Route::get('/galeria/{id}', [GalleryController::class, 'showGallery']);
+Route::get('/galeria', [GalleryController::class, 'listGallery'])->name('listGallery');
+Route::get('/galeria/show/{id}', [GalleryController::class, 'showGallery'])->name('showGallery');
+Route::get('/galeria/create', [GalleryController::class, 'createGallery'])->name('createGallery');
+Route::post('/galeria/store', [GalleryController::class, 'storeGallery'])->name('storeGallery');
+Route::get('/galeria/edit/{id}', [GalleryController::class, 'editGallery'])->name('editGallery');
+Route::get('/galeria/delete/{id}', [GalleryController::class, 'deleteGallery'])->name('deleteGallery');
 
 Route::get('/hirfolyam', [PostController::class, 'show'])->name('hirfolyam');
 Route::post('/hirfolyam/letrehoz', [PostController::class, 'create'])->name('createPost');
