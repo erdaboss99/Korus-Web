@@ -5,7 +5,7 @@
 <div class="d-flex flex-column">
     <div class="d-flex flex-column mx-2">
         <div class="d-flex justify-content-center">
-            <div class="card d-flex mb-3 col-sm-10 col-lg-8 align-self-center">
+            <div class="card d-flex mb-4 col-sm-10 col-lg-10 align-self-center">
             <img src="{{ asset('uploadfolder/images/'.$data->header_img) }}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h1 class="card-title">{{$data->title}}</h1>
@@ -13,6 +13,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div id="post_admin_row">
+        <div id="post_edit" class="hir-button"></div>
+        <div id="post_delete" class="hir-button"></div>
     </div>
 </div>
 
