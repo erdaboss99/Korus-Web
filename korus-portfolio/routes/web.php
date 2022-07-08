@@ -67,3 +67,7 @@ Route::get('/cke', function () {
 Route::get('/dash', function () {
     return view('pages/dashboard');
 });
+
+Route::get('/post/new', function () {
+    return view('pages/dash_config/createpost');
+});

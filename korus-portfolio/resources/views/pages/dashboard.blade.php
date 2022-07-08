@@ -5,7 +5,7 @@
 
 	<div id='dash_menu'>
 		<div>
-            <a href="{{url('/rolunk')}}">Hír hozzáadása</a>
+            <a href="{{url('/post/new')}}">Hír hozzáadása</a>
 		</div>
 		<div>
             <a href="{{url('/rolunk')}}">Galéria hozzáadása</a>
