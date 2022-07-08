@@ -830,6 +830,10 @@ footer{
     margin-bottom: 10px;
 }
 
+#newvideo_name {
+    margin-bottom: 10px;
+}
+
 #editgallery_upper input, #editbanner_upper input, #editmember_upper input{
     margin-left: 30px;
     width: 240px;
