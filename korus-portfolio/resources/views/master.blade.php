@@ -11,8 +11,6 @@
     <link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
     <script src="//code.jquery.com/jquery-latest.js"></script>
     <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-
     <script src="editor-sdk.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/10.0.0/classic/ckeditor.js"></script>
     <title>Egri Érseki Fiúkórus</title>
