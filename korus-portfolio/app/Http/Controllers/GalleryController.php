@@ -18,7 +18,6 @@ class GalleryController extends Controller
                 $g->count = Picture::where('gallery_id', $g->id)->count();
                 if($g->count > 0)
                     $g->lead = Picture::where('gallery_id', $g->id)->first()->thumbnail;
-
             }
             return view('pages/gallery/galeria', compact('galleries'));
         }
@@ -34,13 +33,14 @@ class GalleryController extends Controller
         $videos = Video::all()->where('gallery_id', $id);
 
         return view('pages/gallery/show', compact('pictures', 'videos'));
-
     }
 
     public function editGallery($id) {
         $singleGallery = Gallery::find($id);
+        $pictures = Picture::where('gallery_id', $singleGallery->id)->get();
+        $videos = Video::where('gallery_id', $singleGallery->id)->get();
 
-        return $singleGallery;
+        return view('pages/gallery/edit', compact('singleGallery', 'pictures', 'videos'));
     }
 
     public function createGallery() {
@@ -77,4 +77,23 @@ class GalleryController extends Controller
         Gallery::destroy($id);
         return redirect()->route('listGallery');
     }
+
+    public function storePicture(Request $request)
+    {
+        //TO-DO
+    }
+
+    public function deletePicture($id)
+    {
+        $picture = Picture::find($id);
+
+        $path = public_path('uploadfolder/images/');
+        $name = $picture->name;
+        $th = $picture->thumbnail;
+        unlink($path. $name);
+        unlink($path. $th);
+        Picture::destroy($picture->id);
+        return redirect()->route('listGallery');
+    }
+
 }
