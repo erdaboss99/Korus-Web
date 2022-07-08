@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('lang_id');
             $table->text('header_img');
             $table->string('title');
+            $table->text('read_more');
             $table->text('content');
             $table->timestamps();
         });

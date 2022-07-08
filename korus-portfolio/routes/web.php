@@ -26,6 +26,7 @@ Route::post('/hirfolyam/letrehoz', [PostController::class, 'create'])->name('cre
 Route::post('/hirfolyam/{id}/delete', [PostController::class, 'destroy'])->name('deletePost');
 Route::post('/hirfolyam/{id}/update', [PostController::class, 'update'])->name('updatePost');
 Route::get('/hirfolyam/{id}', [PostController::class, 'showOnePost']);
+Route::get('/hirfolyam/{page}', [PostController::class, 'pageForward']);
 
 
 Route::get('/kapcsolat', function () {
