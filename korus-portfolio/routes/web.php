@@ -56,3 +56,7 @@ Route::get('/korus', function () {
 Route::get('/cke', function () {
     return view('cke_editor');
 });
+
+Route::get('/dash', function () {
+    return view('pages/dashboard');
+});
