@@ -37,6 +37,7 @@ Route::post('/hirfolyam/letrehoz', [PostController::class, 'create'])->name('cre
 Route::post('/hirfolyam/{id}/delete', [PostController::class, 'destroy'])->name('deletePost');
 Route::post('/hirfolyam/{id}/update', [PostController::class, 'update'])->name('updatePost');
 Route::get('/hirfolyam/{id}', [PostController::class, 'showOnePost']);
+Route::get('/hirfolyam/{page}', [PostController::class, 'pageForward']);
 
 
 Route::get('/kapcsolat', function () {
@@ -61,4 +62,8 @@ Route::get('/korus', function () {
 
 Route::get('/cke', function () {
     return view('cke_editor');
+});
+
+Route::get('/dash', function () {
+    return view('pages/dashboard');
 });

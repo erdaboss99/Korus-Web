@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Pagination\Paginator;
 
 class PostController extends Controller
 {
     public static function show(){
 
-        $news = Post::orderBy('id', 'desc')->get();
+
+        $news = Post::orderBy('id', 'desc')->paginate(4);
 
         return view('pages/news', ['data' => $news]);
     }
@@ -40,6 +42,7 @@ class PostController extends Controller
         $new = Post::create([
             'title' => $request->input('title'),
             'lang_id' => $lang,
+            'read_more' => $request->input('read_more'),
             'content' => $request->input('content'),
             'header_img' => $newImgName
         ]);

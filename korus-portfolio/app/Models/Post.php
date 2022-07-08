@@ -13,6 +13,7 @@ class Post extends Model
         'lang_id',
         'header_img',
         'title',
+        'read_more',
         'content'
     ];
 }
