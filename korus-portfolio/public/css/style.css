@@ -45,10 +45,9 @@ table, tr, th, td {
 
 .fejlec {
     background-color:#c64c09;
-    height:160px;
+    height:10%;
     width:100%;
     position:relative;
-	z-index:100;
 }
 
 #lang_box {
@@ -70,7 +69,9 @@ table, tr, th, td {
 
 .menu {
     margin: 0 auto;
-    width: 630px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .menu ul {
@@ -86,7 +87,8 @@ table, tr, th, td {
     display:block;
     float: left;
     list-style-type: none;
-    font-size:18px;
+    font-size:100%;
+    margin-top: 10px;
 }
 
 .menu ul a {
@@ -127,22 +129,16 @@ table, tr, th, td {
 }
 
 .szoveg_kj {
-    float:left;
-    width:695px;
-    height:225px;
+    float:inline-start;
+    width:715px;
     margin-right: 20px;
-}
-
-.szoveg_kj p {
-    width:695px;
-    padding: 0;
-    margin: 0;
 }
 
 .kor_kep{
     float:left;
     width: 225px;
     height: 225px;
+    text-align:justify;
 }
 
 .bemutatkozas .kor_kep {
@@ -156,7 +152,7 @@ table, tr, th, td {
     border-radius: 112px;
     -webkit-border-radius: 112px;
     -moz-border-radius: 112px;
-    float:left;
+    float:inline-start;
     filter: grayscale(0%);
     -webkit-filter: grayscale(0%);
     filter: gray;
@@ -168,24 +164,38 @@ table, tr, th, td {
     filter: none;
 }
 
-.szoveg_kep_bj {
-    float:left;
-    margin-top:50px;
-    display: flex;
+.akt_oldal
+{
+    width:auto;
+    text-align:justify;
+    display: flexbox;
+}
 
+.szoveg_kep_bj {
+    margin-top:50px;
+    margin-bottom: 20px;
+    display: flex;
+    height: 50%;
+    text-align:justify;
 }
 
 .szoveg_kb {
-    float:left;
+    float:inline-end;
     width:715px;
     padding-left:20px;
 }
 
+.szoveg_kb p { 
+    padding: 0;
+    margin: 0;
+}
+
 .korusrol{
-    float: left;
+    float: inline-start;
 }
 
 .szoveg_kb a, .szoveg_kj a, .korusrol a, .logonk a{
+    width: fit-content;
     text-decoration: none;
     color: #c74c09;
 }
@@ -231,10 +241,13 @@ table, tr, th, td {
 }
 
 .sziluett{
-    margin: 20px auto -10px auto;
+    margin: 20px 10px -10px 0px;
     padding: 0px;
-    text-align: right;
-    width: 960px;
+    text-align: end;
+}
+.sziluett img{
+    width: 40%;
+    height: 40%;
 }
 
 .kapcsolat_oszlop{
@@ -481,7 +494,7 @@ footer{
     border-radius: 70px;
     -webkit-border-radius: 70px;
     -moz-border-radius: 70px;
-    float:left;
+    float:inline-start;
     padding: 10px;
     filter: grayscale(0%);
     -webkit-filter: grayscale(0%);
@@ -505,11 +518,16 @@ footer{
     padding:0;
 }
 
+
 .korustagok {
     margin-top:40px;
-    float:left;
-    width:960px;
+    justify-content: center;
 }
+
+.korustagok h1 {
+    text-align: center;
+}
+
 
 #user_box {
     display: block;
