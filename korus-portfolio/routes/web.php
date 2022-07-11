@@ -32,6 +32,9 @@ Route::post('/galeria/video/delete/{id}', [GalleryController::class, 'deleteVide
 Route::get('/tag/current/edit', [ChoirController::class, 'editCurrent'])->name('editCurrent');
 Route::get('/tag/current/delete/{id}', [ChoirController::class, 'deleteCurrent'])->name('deleteCurrent');
 Route::post('/tag/current/store', [ChoirController::class, 'storeCurrent'])->name('storeCurrent');
+Route::get('/tag/old/edit', [ChoirController::class, 'editOld'])->name('editOld');
+Route::get('/tag/old/delete/{id}', [ChoirController::class, 'deleteOld'])->name('deleteOld');
+Route::post('/tag/old/store', [ChoirController::class, 'storeOld'])->name('storeOld');
 
 
 
