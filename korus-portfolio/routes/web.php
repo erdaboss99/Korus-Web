@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChoirController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\LoginController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +33,8 @@ Route::post('/hirfolyam/{id}/delete', [PostController::class, 'destroy'])->name(
 Route::post('/hirfolyam/{id}/update', [PostController::class, 'update'])->name('updatePost');
 Route::get('/hirfolyam/{id}', [PostController::class, 'showOnePost']);
 Route::get('/hirfolyam/{page}', [PostController::class, 'pageForward']);
+
+
 
 
 Route::get('/kapcsolat', function () {
@@ -64,3 +68,13 @@ Route::get('/dash', function () {
 Route::get('/post/new', function () {
     return view('pages/dash_config/createpost');
 });
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/welcome', function () {
+    return view('pages/welcome');
+});
+Route::post('/login', [LoginController::class, 'postLogin']);
+
