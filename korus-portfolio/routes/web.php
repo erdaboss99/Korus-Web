@@ -23,9 +23,23 @@ Route::get('/rolunk', [ChoirController::class, 'index']);
 Route::get('/galeria', [GalleryController::class, 'listGallery'])->name('listGallery');
 Route::get('/galeria/show/{id}', [GalleryController::class, 'showGallery'])->name('showGallery');
 Route::get('/galeria/create', [GalleryController::class, 'createGallery'])->name('createGallery');
+Route::post('/galeria/update/{id}', [GalleryController::class, 'updateGallery'])->name('updateGallery');
 Route::post('/galeria/store', [GalleryController::class, 'storeGallery'])->name('storeGallery');
 Route::get('/galeria/edit/{id}', [GalleryController::class, 'editGallery'])->name('editGallery');
 Route::get('/galeria/delete/{id}', [GalleryController::class, 'deleteGallery'])->name('deleteGallery');
+Route::post('/galeria/picture/store', [GalleryController::class, 'storePicture'])->name('storePicture');//TODO
+Route::get('/galeria/picture/delete/{id}', [GalleryController::class, 'deletePicture'])->name('deletePicture');
+Route::post('/galeria/video/store', [GalleryController::class, 'storeVideo'])->name('storeVideo');
+Route::post('/galeria/video/delete/{id}', [GalleryController::class, 'deleteVideo'])->name('deleteVideo');
+Route::get('/tag/current/edit', [ChoirController::class, 'editCurrent'])->name('editCurrent');
+Route::get('/tag/current/delete/{id}', [ChoirController::class, 'deleteCurrent'])->name('deleteCurrent');
+Route::post('/tag/current/store', [ChoirController::class, 'storeCurrent'])->name('storeCurrent');
+Route::get('/tag/old/edit', [ChoirController::class, 'editOld'])->name('editOld');
+Route::get('/tag/old/delete/{id}', [ChoirController::class, 'deleteOld'])->name('deleteOld');
+Route::post('/tag/old/store', [ChoirController::class, 'storeOld'])->name('storeOld');
+
+
+
 
 Route::get('/hirfolyam', [PostController::class, 'show'])->name('hirfolyam');
 Route::post('/hirfolyam/letrehoz', [PostController::class, 'create'])->name('createPost');
