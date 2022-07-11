@@ -1,9 +1,12 @@
 @extends("master")
 @section('content')
 
+@error('failed')
+{{$message}}
+@enderror
 <div id="login_form_holder">
-    <form action="{{url('/login')}}" method="POST" id="admin_form" class="login_forms">
-        @csrf
+    <form action="{{url('/authenticate')}}" method="POST" id="admin_form" class="login_forms">
+        @csrf()
         <label class="admin_pass">Admin jelszó</label>
         <input type="password" id="admin_pass" name="password">
         <input type="hidden" name="user" value="admin">

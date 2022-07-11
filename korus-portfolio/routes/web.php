@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChoirController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,4 +73,5 @@ Route::get('/login', function () {
 Route::get('/welcome', function () {
     return view('pages/welcome');
 });
-Route::post('/login', [LoginController::class, 'postLogin']);
+Route::get('/login', [UserController::class, 'login']);
+Route::post('/authenticate', [UserController::class, 'authenticate']);
