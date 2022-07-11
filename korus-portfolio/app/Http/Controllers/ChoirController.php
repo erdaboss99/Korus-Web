@@ -81,4 +81,33 @@ class ChoirController extends Controller
         Member::destroy($member->id);
         return redirect('tag/old/edit');
     }
+
+    public function storeOld(Request $request)
+    {
+        if($request->file('file')){
+
+            $file = $request->file('file');
+            $destinationPath = public_path().'/uploadfolder/members';
+            $filename = str::random(6) . '_' .($file->getClientOriginalName());
+            $uploadSuccess   = $file->move($destinationPath, $filename);
+
+            $image_th = Image::make($destinationPath.'/'.$filename);
+            if($image_th->width() > $image_th->height()){
+                $image_th->crop($image_th->height(),$image_th->height());
+            }else{
+                $image_th->crop($image_th->width(),$image_th->width());
+            }
+            $image_th->widen(124);
+            $image_th->save(null, 90);
+
+            $member = Member::create([
+                'source' => $filename,
+                'name' => $request->input('name'),
+                'is_old' => 1
+            ]);
+            return redirect('/tag/old/edit');
+        }else{
+            return redirect()->back('success', 'Nem volt file kiválasztva!');
+        }
+    }
 }
