@@ -8,6 +8,7 @@ use App\Models\Lang;
 use App\Models\Picture;
 use App\Models\Post;
 use App\Models\Video;
+use App\Models\User;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -259,7 +260,17 @@ class DatabaseSeeder extends Seeder
             'code' => 'en',
             'name' => 'Angol',
         ]);
+        User::factory()->create([
+            'user' => 'admin',
+            'is_admin' => '1',
+            'password' => '21232f297a57a5a743894a0e4a801fc3',
+        ]);
 
+        User::factory()->create([
+            'user' => 'tag',
+            'is_admin' => '0',
+            'password' => '21232f297a57a5a743894a0e4a801fc3',
+        ]);
 
 
 

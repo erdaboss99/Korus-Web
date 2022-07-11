@@ -64,3 +64,12 @@ Route::get('/dash', function () {
 Route::get('/post/new', function () {
     return view('pages/dash_config/createpost');
 });
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/welcome', function () {
+    return view('pages/welcome');
+});
+Route::post('/login', [LoginController::class, 'postLogin']);
