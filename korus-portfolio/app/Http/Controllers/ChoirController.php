@@ -64,4 +64,21 @@ class ChoirController extends Controller
             return redirect()->back('success', 'Nem volt file kiválasztva!');
         }
     }
+
+    public function editOld(){
+        $members = Member::all()->where('is_old', 1);
+        return view('pages/member/old/edit', compact('members'));
+
+    }
+
+    public function deleteOld($id)
+    {
+        $member = Member::find($id);
+
+        $path = public_path('uploadfolder/members/');
+        $pic = $member->source;
+        unlink($path. $pic);
+        Member::destroy($member->id);
+        return redirect('tag/old/edit');
+    }
 }
