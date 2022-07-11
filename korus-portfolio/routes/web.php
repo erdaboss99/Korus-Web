@@ -29,6 +29,10 @@ Route::post('/galeria/picture/store', [GalleryController::class, 'storePicture']
 Route::get('/galeria/picture/delete/{id}', [GalleryController::class, 'deletePicture'])->name('deletePicture');
 Route::post('/galeria/video/store', [GalleryController::class, 'storeVideo'])->name('storeVideo');
 Route::post('/galeria/video/delete/{id}', [GalleryController::class, 'deleteVideo'])->name('deleteVideo');
+Route::get('/tag/current/edit', [ChoirController::class, 'editCurrent'])->name('editCurrent');
+Route::get('/tag/current/delete/{id}', [ChoirController::class, 'deleteCurrent'])->name('deleteCurrent');
+Route::post('/tag/current/store', [ChoirController::class, 'storeCurrent'])->name('storeCurrent');
+
 
 
 
