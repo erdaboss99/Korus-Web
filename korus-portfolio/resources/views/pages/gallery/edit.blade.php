@@ -19,8 +19,9 @@
         <form method="POST" action="{{ route('storePicture') }}" enctype="multipart/form-data">
             @csrf
                     <label for="newpicture_file" class="newpost_labels">Feltöltendő kép:</label>
-                    <input type="file" name="" id="newpicture_file">
-                    <input type="submit" value="WIP">
+                    <input type="file" name="file" id="newpicture_file">
+                    <input type="hidden" name="gallery_id" id="" value="{{ $singleGallery->id }}">
+                    <input type="submit" value="Hozzáadás">
         </form>
     </div>
     <div class="newvideo_block">

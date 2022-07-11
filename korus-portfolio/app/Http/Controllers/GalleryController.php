@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\Gallery;
 use App\Models\Picture;
 use App\Models\Video;
+use Image;
 
 
 class GalleryController extends Controller
@@ -80,7 +82,44 @@ class GalleryController extends Controller
 
     public function storePicture(Request $request)
     {
-        //TO-DO
+        if($request->file('file')){
+
+            $file = $request->file('file');
+            $destinationPath = public_path().'/uploadfolder/images';
+            $filename = str::random(6) . '_' .($file->getClientOriginalName());
+            $uploadSuccess   = $file->move($destinationPath, $filename);
+
+            $image = Image::make($destinationPath.'/'.$filename);
+            if($image->width() > 900){
+                $image->widen(900);
+            }
+            if($image->height() > 900){
+                $image->heighten(900);
+            }
+            $image->save(null, 90);
+
+            $filename_th = 'th_'.$filename;
+            $image_th = Image::make($destinationPath.'/'.$filename);
+            if($image_th->width() > $image_th->height()){
+                $image_th->crop($image_th->height(),$image_th->height());
+            }else{
+                $image_th->crop($image_th->width(),$image_th->width());
+            }
+            $image_th->widen(124);
+            $image_th->save($destinationPath.'/th_'.$filename, 90);
+
+            $picture = Picture::create([
+                'gallery_id' => $request->input('gallery_id'),
+                'name' => $filename,
+                'thumbnail' => $filename_th
+            ]);
+
+
+            return redirect('galeria/edit/'.$picture['gallery_id']);
+        }
+        else{
+            return redirect()->back('success', 'Nem volt file kiválasztva!');
+        }
     }
 
     public function deletePicture($id)
